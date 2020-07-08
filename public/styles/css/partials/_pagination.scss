@@ -1,0 +1,69 @@
+.paginationStyle {
+  text-align: center;
+
+  .pagination {
+    @include clearAfter;
+    display: inline-block;
+
+
+    li {
+      float: left;
+      margin-right: 8px;
+
+      &:last-child, &:nth-last-child(2) {
+        margin-right: 0;
+      }
+      a {
+        color: rgba($text, 0.8);
+        &:hover {
+          color: rgb(155, 155, 155);
+        }
+      }
+      &.active {
+        a {
+          color: $text;
+          font-family: $bold;
+          //text-decoration: underline;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $text;
+          }
+        }
+      }
+      &.disabled {
+        a {
+          opacity: 0.3;
+        }
+      }
+    }
+    .previous, .next {
+      .icon-dropdown {
+        font-size: 14px;
+        color: $blue;
+      }
+    }
+    .previous {
+      margin-right: 15px;
+      .icon-dropdown {
+        display: inline-block;
+        @include rotate(90);
+      }
+
+    }
+    .next {
+      margin-left: 15px;
+      .icon-dropdown {
+        display: inline-block;
+        @include rotate(-90);
+      }
+
+    }
+  }
+}

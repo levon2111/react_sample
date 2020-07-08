@@ -1,0 +1,158 @@
+.withSideMenu {
+  position: relative;
+  min-height: 800px;
+
+  .sideMenu {
+    width: 282px;
+    height: 100%;
+    float: left;
+    box-shadow: 4px 0 4px 0px rgba(55, 55, 55, 0.14);
+    @include posAbs($left: 0, $top: 0);
+    overflow-y: auto;
+  }
+  .scrollArea {
+    min-height: 700px;
+    .mCSB_container > ul {
+      margin-bottom: 110px;
+    }
+  }
+  .contSideMenu {
+    width: 74%;
+    width: calc(100% - 300px);
+    float: right;
+  }
+}
+
+.itemsList {
+  li {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      &:before {
+        content: "";
+        @include posAbs($left: 0, $top: 56px, $bottom: 7px);
+        width: 1px;
+        background-color: #fff;
+      }
+    }
+    .itemBtn, .itemLink {
+      padding: 0 30px 0 20px;
+      display: inline-block;
+      @include ellips();
+      max-width: 100%;
+      cursor: pointer;
+      @include transition(all, .3s);
+
+      &:hover {
+        color: lighten($blue, 10);
+        &:before {
+          color: lighten($blue, 10);
+          @include transition(all, .3s);
+        }
+      }
+    }
+    .menuBtn {
+      cursor: pointer;
+      @include posAbs($right: 20px, $top: 0);
+      &:hover {
+        color: $blue;
+        @include transition(all, .3s);
+      }
+    }
+
+  }
+  ul {
+    font-family: $bold;
+    position: relative;
+    margin-left: 20px;
+    width: 92%;
+    width: calc(100% - 20px);
+    min-width: 162px;
+    white-space: nowrap;
+
+    &:before {
+      content: "";
+      @include posAbs($left: 0, $top: 0, $bottom: 7px);
+      background-color: lighten($blue, 30);
+      width: 1px;
+    }
+
+    &.noChild {
+      &:before {
+        content: none;
+      }
+    }
+
+    ul {
+      font-family: $regular;
+      li {
+        position: relative;
+
+        &:after {
+          content: "";
+          @include posAbs($left: -20px, $top: 8px);
+          background-color: lighten($blue, 30);
+          height: 1px;
+          width: 27px;
+        }
+      }
+    }
+  }
+  .activeItem {
+    color: $blue;
+  }
+}
+
+.folder {
+  position: relative;
+
+  ul {
+    display: none;
+  }
+  & > .itemBtn {
+    &:before {
+      content: "\e91c";
+      font-family: 'fitch-malta';
+      font-size: 14px;
+      @include posAbs($left: -9px, $top: 0);
+      color: lighten($blue, 20);
+      z-index: 1;
+    }
+  }
+
+  &.open {
+    & > .itemBtn {
+      &:before {
+        content: "\e91d";
+        color: $blue;
+      }
+    }
+
+    & > ul {
+      display: block;
+    }
+  }
+}
+
+.itemLink {
+  &:before {
+    content: "\e926";
+    font-family: 'fitch-malta';
+    font-size: 16px;
+    background-color: #fff;
+    @include posAbs($left: -5px, $top: 0);
+    color: lighten($blue, 20);
+    z-index: 1;
+  }
+}
+
+.toggleArea {
+  display: none;
+}
+
+.toggle {
+  & > .toggleArea {
+    display: block;
+  }
+}

@@ -1,0 +1,119 @@
+
+.tab-links {
+  width:100%;
+  display:inline-block;
+
+@include clearAfter;
+
+    li {
+      float:left;
+      list-style:none;
+
+      a {
+
+        display: inline-block;
+        font-family: $bold;
+        color: rgba(155, 155, 155, 0.5);
+        @include transition(all, .3s);
+        border-right: 1px solid transparent;
+        text-transform: uppercase;
+      }
+
+
+    }
+
+  &.dark {
+    box-shadow: 0px 2px 4px 0px rgba(55, 55, 55, 0.24);
+    &>li {
+        width: 25%;
+        a {
+          padding: 22px 0;
+          display: block;
+          text-align: center;
+
+          background-color: $dark;
+          border-right-color: rgba(255, 255, 255, 0.4);
+
+          &:hover {
+            opacity: 0.9;
+          }
+
+        }
+        &.active {
+          a {
+            background: $blue;
+            color: #fff;
+            position: relative;
+
+            &:after {
+              position: absolute;
+              content: '';
+              @include bgCover("../img/triangle.png", center);
+              width: 28px;
+              height: 11px;
+              bottom: -4px;
+              left: 50%;
+              @include translateX(-50%);
+
+            }
+
+          }
+        }
+
+
+    }
+  }
+
+  &.light {
+
+    li {
+      &.active {
+        a {
+          color: $blue;
+
+          &:hover {
+            color: $blue;
+          }
+
+          span {
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 34px;
+              height: 3px;
+              left: 0;
+              bottom: -12px;
+              background-color: $blue;
+
+
+            }
+          }
+
+        }
+      }
+
+      a {
+        padding: 32px 58px;
+        border-bottom: 1px solid rgba(155, 155, 155, 0.3);
+        border-right-color: rgba(155, 155, 155, 0.3);
+
+        &:hover {
+          color: $text;
+        }
+      }
+
+      &:last-child a {
+        border-right: 0;
+        padding-right: 56px;
+      }
+
+    }
+  }
+}
+
+
+
+
+

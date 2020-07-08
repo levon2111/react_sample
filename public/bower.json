@@ -1,0 +1,23 @@
+{
+  "name": "sample",
+  "authors": [
+    "levon_yeghizaryan"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "select2": "^4.0.3",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "magnific-popup": "^1.1.0"
+  }
+}

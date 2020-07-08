@@ -1,0 +1,98 @@
+.tableStyle {
+  border: 2px solid rgba(110, 127, 145, 0.08);
+  width: 100%;
+
+  &.tableFix {
+    table-layout: fixed;
+  }
+
+  th, td {
+    vertical-align: middle;
+    text-align: center;
+
+  }
+  thead {
+    tr {
+      background-color: rgba(155, 155, 155, 0.7);
+      height: 50px;
+      color: #fff;
+    }
+  }
+  th {
+    border-right: 2px solid #FCFCFC;
+
+    &:last-child {
+      border-right: 0;
+    }
+    &.thSettings {
+      width: 130px;
+    }
+
+    &.thSettingsLg {
+      width: 175px;
+    }
+
+    &.thStatus {
+      width: 65px;
+    }
+    .icon-ic-settings {
+      font-size: 23px;
+    }
+  }
+
+  td {
+    border-right: 2px solid rgba(110, 127, 145, 0.08);
+    padding: 20px;
+
+    .icon-pdf {
+      font-size: 23px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+  tbody {
+    tr:nth-child(even) {
+      background-color: rgba(155, 155, 155, 0.1);
+    }
+  }
+
+.blockCell {
+  span {
+    display: block;
+    line-height: 30px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &.tLeft {
+    text-align: left;
+  }
+}
+
+  .iconCell {
+
+    a {
+      display: inline-block;
+    }
+    span {
+      font-size: 23px;
+      vertical-align: text-top;
+    }
+    li {
+      float: left;
+      padding:0 13px;
+      border-right: 1px solid rgba($text, .2);
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+.thSize-1 {
+  width: 7%;
+}
+.thSize-2 {
+  width: 16%;
+}

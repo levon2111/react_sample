@@ -1,0 +1,75 @@
+.sidebar {
+	width: 230px;
+	height: calc(100% - 78px);
+	padding-top: 80px;
+	position: fixed;
+	overflow-y: auto;
+	z-index: 1;
+	background-color: $dark; 
+	box-shadow: 4px 0px 8px 0px rgba(55, 55, 55, 0.14);
+
+	.menu {
+		li {
+			position: relative;
+			margin: 27px 0;
+
+			a {
+				display: block;
+				padding: 12px 0px 12px 35px; 
+				color: rgba(255,255,255,0.3);
+				@include transition(all 0.3s);
+
+				.icon {
+					width: 30px;
+					display: inline-block;
+					text-align: center;
+					font-size: 24px;
+					vertical-align: middle;
+				}
+				span {
+					margin-left: 15px;
+					text-transform: uppercase;
+				}
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			&.active {
+				background-color: $blue;
+
+				a {
+					color: #fff;
+				}
+
+				&::before, &::after {
+					content: " ";
+					width: 0;
+					height: 0;
+					display: block;
+					position: absolute;
+					border-style: solid;
+					border-width: 13px 0 13px 15px;
+					border-color: transparent transparent transparent transparent;
+				}
+				&::before {
+					top: -13px;
+					border-left-color: $dark;
+				}
+				&::after {
+					bottom: -13px;
+					border-left-color: $blue;
+				}
+			}
+
+			&.borderTop {
+				border-top: 1px solid rgba(255,255,255,0.3);
+
+				a {
+					padding-top: 17px;
+				}
+			}
+		}
+	}
+}

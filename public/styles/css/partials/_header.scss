@@ -1,0 +1,96 @@
+header {
+	width: 100%;
+	height: 78px;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	box-shadow: 0px 4px 8px 0px rgba(55, 55, 55, 0.14);
+	background-color: #fff;
+
+	.logoSide {
+		width: 160px;
+		height: 78px;
+		float: left;
+		display: table;
+		margin-left: 30px;
+
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			@include transition(all 0.3s);
+
+			img {
+				width: 100%;
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	.rightBlock {
+		float: right;
+
+		.menu {
+			float: left;
+			height: 78px;
+			display: table;
+			margin-right: 40px;
+
+			ul {
+				display: table-cell;
+				vertical-align: middle;
+
+				li {
+					float: left;
+					padding: 0px 30px;
+					border-right: 1px solid rgba(155,155,155,0.3);
+
+					a {
+						display: block;
+						padding: 10px 0;
+                        @include transition(all 0.3s);
+
+                        &:hover {
+                            color: #565656;
+
+                            .icon {
+                                color: $blue;
+                            }
+                        } 
+					}
+
+					.field {
+						input {
+							width: 250px;
+                            height: 30px;
+                            @include placeholder(rgba($text, 0.5), $regular, 16px, none);
+						}
+					}
+
+					&:last-child {
+						border-right: 0px;
+					}
+				}
+			}
+		}
+
+		.userInfo {
+			height: 78px;
+			width: 260px;
+			display: table;
+			text-align: center;
+			border-left: 1px solid $text10;
+			background-color: $text10; 
+
+			a {
+				display: table-cell;
+				vertical-align: middle;
+
+				.icon {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}

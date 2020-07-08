@@ -1,0 +1,53 @@
+/* Start Imports */
+
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/reset';
+@import 'partials/fonts';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+/* Import Header Styles */
+
+@import 'partials/header';
+
+/* Import Sidebar Styles */
+
+@import 'partials/sidebar';
+
+/* Import Steps Styles */
+
+@import 'partials/steps';
+
+/* Import Tabs Styles */
+
+@import 'partials/tabs';
+
+/* Import table Styles */
+
+@import "partials/table";
+
+/* Import pagination Styles */
+
+@import "partials/pagination";
+
+/* Import Side Menu Styles */
+
+@import "partials/side-menu";
+
+/* Import lists Styles */
+
+@import "partials/lists";
+
+/* Import plugins Styles */
+
+@import "partials/plugins";
+
+/* Import globals Styles */
+
+@import "partials/globals";
+
+
+/* Import Responsive Styles */
+
+@import 'partials/responsive';
